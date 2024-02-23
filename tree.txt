@@ -1,0 +1,16 @@
+.
+├── controllers
+│   └── postController.go
+├── go.mod
+├── go.sum
+├── initializers
+│   ├── connectToPostgreSQL.go
+│   └── loadEnvVariable.go
+├── main.go
+├── migrate
+│   └── migrate.go
+├── models
+│   └── postModel.go
+└── tree.txt
+
+4 directories, 9 files

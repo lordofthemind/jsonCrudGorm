@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  gin-go-app:
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "9090:9090"
+    depends_on:
+      - postgresql
+
+  postgresql:
+    image: postgres:latest
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

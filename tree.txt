@@ -1,6 +1,8 @@
 .
+├── Dockerfile
 ├── controllers
 │   └── postController.go
+├── docker-compose.yml
 ├── go.mod
 ├── go.sum
 ├── initializers
@@ -13,4 +15,4 @@
 │   └── postModel.go
 └── tree.txt
 
-4 directories, 9 files
+4 directories, 11 files
